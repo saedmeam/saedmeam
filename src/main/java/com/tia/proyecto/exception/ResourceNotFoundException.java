@@ -1,4 +1,4 @@
-package com.prueba.pruebaTia.exception;
+package com.tia.proyecto.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

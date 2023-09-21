@@ -1,33 +1,27 @@
-package com.prueba.pruebaTia.bean;
+package com.tia.proyecto.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "PRODUCT")
-public class Product {
+public class ProductDTO {
 
 	private String sku;
 	private String des;
 	private Double price;
 	private Double incremen;
+	private Double incrementPrice;
+	private Integer maxDuesNo;
 
-	public Product() {
+	public ProductDTO() {
 
 	}
 
-	public Product(String sku, String des, Double price, Double incremen) {
+	public ProductDTO(String sku, String des, Double price, Double incremen, Double incrementPrice, Integer maxDuesNo) {
 		this.sku = sku;
 		this.des = des;
 		this.price = price;
 		this.incremen = incremen;
+		this.incrementPrice = incrementPrice;
+		this.maxDuesNo = maxDuesNo;
 	}
 
-	    @Id
-//	    @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "sku", nullable = false)
 	public String getSku() {
 		return sku;
 	}
@@ -36,7 +30,6 @@ public class Product {
 		this.sku = sku;
 	}
 
-	@Column(name = "des", nullable = false)
 	public String getDes() {
 		return des;
 	}
@@ -45,7 +38,6 @@ public class Product {
 		this.des = des;
 	}
 
-	@Column(name = "price", nullable = false)
 	public Double getPrice() {
 		return price;
 	}
@@ -54,13 +46,28 @@ public class Product {
 		this.price = price;
 	}
 
-	@Column(name = "incremen", nullable = false)
 	public Double getIncremen() {
 		return incremen;
 	}
 
 	public void setIncremen(Double incremen) {
 		this.incremen = incremen;
+	}
+
+	public Double getIncrementPrice() {
+		return incrementPrice;
+	}
+
+	public void setIncrementPrice(Double incrementPrice) {
+		this.incrementPrice = incrementPrice;
+	}
+
+	public Integer getMaxDuesNo() {
+		return maxDuesNo;
+	}
+
+	public void setMaxDuesNo(Integer maxDuesNo) {
+		this.maxDuesNo = maxDuesNo;
 	}
 
 }

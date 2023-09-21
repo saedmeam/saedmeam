@@ -1,10 +1,10 @@
-package com.prueba.pruebaTia;
+package com.tia.proyecto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PruebaTiaApplicationTests {
+class ProyectoApplicationTests {
 
 	@Test
 	void contextLoads() {

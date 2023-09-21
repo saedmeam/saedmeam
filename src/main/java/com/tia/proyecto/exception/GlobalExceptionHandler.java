@@ -1,4 +1,4 @@
-package com.prueba.pruebaTia.exception;
+package com.tia.proyecto.exception;
 import java.util.Date;
 
 import org.springframework.http.HttpStatus;

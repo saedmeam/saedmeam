@@ -1,4 +1,4 @@
-package com.prueba.pruebaTia.repository;
+package com.tia.proyecto.repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.prueba.pruebaTia.bean.ProductPrice;
+import com.tia.proyecto.bean.ProductPrice;
 
 @Repository
 

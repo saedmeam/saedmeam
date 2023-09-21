@@ -1,13 +1,13 @@
-package com.prueba.pruebaTia;
+package com.tia.proyecto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PruebaTiaApplication {
+public class ProyectoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PruebaTiaApplication.class, args);
+		SpringApplication.run(ProyectoApplication.class, args);
 	}
 
 }

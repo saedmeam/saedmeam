@@ -1,4 +1,4 @@
-package com.prueba.pruebaTia.controller;
+package com.tia.proyecto.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,9 +27,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.prueba.pruebaTia.bean.Product;
-import com.prueba.pruebaTia.exception.ResourceNotFoundException;
-import com.prueba.pruebaTia.repository.ProductRepository;
+import com.tia.proyecto.bean.Product;
+import com.tia.proyecto.exception.ResourceNotFoundException;
+import com.tia.proyecto.repository.ProductRepository;
 
 @RestController
 @RequestMapping("/api/v1/product")
