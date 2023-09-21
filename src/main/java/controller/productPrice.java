@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import bean.ProductPrice;
+import dto.ProductDTO;
 import exception.ResourceNotFoundException;
 import repository.ProductPriceRepository;
 
@@ -39,6 +41,26 @@ public class productPrice {
 		ProductPrice ProductPrice = productPriceRepository.findById(productId)
 				.orElseThrow(() -> new ResourceNotFoundException("ProductPrice not found for this id :: " + productId));
 		return ResponseEntity.ok().body(ProductPrice);
+	}
+
+	@GetMapping("/{sku}")
+	public List<ProductDTO> getProductPriceBySku(@PathVariable(value = "sku") String sku)
+			throws ResourceNotFoundException {
+		List<ProductPrice> lObjProductPrice = productPriceRepository
+				.findAllByProductPricebySKUP(sku != null ? sku : "");
+		List<ProductDTO> lObjProductDTO = new ArrayList<>();
+		ProductDTO objProductDTO = new ProductDTO();
+		for (ProductPrice res : lObjProductPrice) {
+			objProductDTO = new ProductDTO();
+			objProductDTO.setDes(res.getProduct().getDes());
+			objProductDTO.setIncremen(res.getProduct().getIncremen());
+			objProductDTO.setIncrementPrice(res.getIncrementPrice());
+			objProductDTO.setMaxDuesNo(res.getMaxDuesNo());
+			objProductDTO.setPrice(res.getProduct().getPrice());
+			objProductDTO.setSku(res.getProduct().getSku());
+			lObjProductDTO.add(objProductDTO);
+		}
+		return lObjProductDTO;
 	}
 
 	@PostMapping("/")
