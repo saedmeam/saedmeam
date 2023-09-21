@@ -1,4 +1,4 @@
-package bean;
+package com.prueba.pruebaTia.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

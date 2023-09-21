@@ -1,4 +1,4 @@
-package dto;
+package com.prueba.pruebaTia.dto;
 
 public class ProductDTO {
 

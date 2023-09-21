@@ -1,9 +1,9 @@
-package repository;
+package com.prueba.pruebaTia.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import bean.Product;
+import com.prueba.pruebaTia.bean.Product;
 
 @Repository
 

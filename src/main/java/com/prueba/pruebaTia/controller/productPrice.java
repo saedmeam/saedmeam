@@ -1,4 +1,4 @@
-package controller;
+package com.prueba.pruebaTia.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import bean.ProductPrice;
-import dto.ProductDTO;
-import exception.ResourceNotFoundException;
-import repository.ProductPriceRepository;
+import com.prueba.pruebaTia.bean.ProductPrice;
+import com.prueba.pruebaTia.dto.ProductDTO;
+import com.prueba.pruebaTia.exception.ResourceNotFoundException;
+import com.prueba.pruebaTia.repository.ProductPriceRepository;
 
 @RestController
 @RequestMapping("/api/v1/productPrice")

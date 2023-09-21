@@ -1,4 +1,4 @@
-package exception;
+package com.prueba.pruebaTia.exception;
 
 import java.util.Date;
 
